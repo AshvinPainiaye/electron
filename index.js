@@ -1,7 +1,12 @@
 const fs = require('fs');
 
 function getFiles(path) {
-    console.log(path);
-    var result = fs.readdirSync(path);
-    document.getElementById('pane').innerHTML = result;
+  var result = fs.readdirSync(path);
+
+  var tab = [];
+  for(var i= 0; i < result.length; i++)
+  {
+    tab.push('<tr><td>' + result[i] + '</td></tr>');
+  }
+  document.getElementById('pane').innerHTML = tab;
 }
