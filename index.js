@@ -8,5 +8,5 @@ function getFiles(path) {
   {
     tab.push('<tr><td>' + result[i] + '</td></tr>');
   }
-  document.getElementById('pane').innerHTML = tab;
+  document.getElementById('pane').innerHTML = tab.join(" ");
 }
