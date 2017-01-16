@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-function getFiles() {
-    var test = fs.readdirSync('C:\wamp64');
-    document.getElementById('pane').innerHTML = test;
+function getFiles(path) {
+    var result = fs.readdirSync(path);
+    document.getElementById('pane').innerHTML = result;
 }
